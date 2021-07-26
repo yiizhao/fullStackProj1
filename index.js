@@ -2,7 +2,7 @@
 //only common js modules supported, Node not support ES 2015
 const express = require('express');
 const mongoose = require('mongoose');
-const cookieSession = require('cookie-Session');
+const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/User'); //execute  mongoose，register first
