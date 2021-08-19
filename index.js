@@ -46,7 +46,7 @@ if (process.env.NODE_ENV == 'production') {//heroku set it
     //doesn't know the roule
     const path = require('path');
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(_dirname,'client', 'build', 'index.html' ));
+        res.sendFile(path.resolve(__dirname,'client', 'build', 'index.html' ));
     });
 }
 
