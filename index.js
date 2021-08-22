@@ -7,6 +7,7 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User'); //execute  mongoose，register first
+require('./models/Survey'); //execute survey
 require('./services/passport'); //we only make sure the file is executed
 
 
@@ -33,6 +34,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 //only run in production
 if (process.env.NODE_ENV == 'production') {//heroku set it
